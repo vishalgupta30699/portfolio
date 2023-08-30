@@ -1,185 +1,39 @@
-import React, { Component } from 'react';
-import ReactGA from 'react-ga';
-import $ from 'jquery';
-import './App.css';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import About from './Components/About';
-import Resume from './Components/Resume';
-import Contact from './Components/Contact';
-import Portfolio from './Components/Portfolio';
+import "./App.css";
+import About from "./component/about/About";
+import Contact from "./component/contact/Contact";
+import Experience from "./component/experience/Experience";
+import Footer from "./component/footer/Footer";
+import Header from "./component/header/Header";
+import Home from "./component/home/Home";
+import Project from "./component/project/Project";
+import Skills from "./component/skills/Skills";
+import { Element } from "react-scroll";
 
-class App extends Component {
-
-  constructor(props){
-    super(props);
-    this.state = {
-      foo: 'bar',
-      resumeData: {
-        "main": {
-    "name": "Vishal Gupta",
-    "occupation": "Coding",
-    "description": "I am final year student looking for job opportunity",
-    "image": "vishal_gupta.jpg",
-    "bio": "I am final year student completing B.Tech from Ujjain engineering College,Ujjain in CSE branch.I am looking for company for Job.I have good problem solving skills.I love Competitive Coding too.",
-    "contactmessage": "Get in touch with me to receive further details or anything else.",
-    "email": "vishalg30699@gmail.com",
-    "phone": "+91 7024692684",
-    "address": {
-      "street": "20/5 Sadar Bazar Porsa",
-      "city": "Morena",
-      "state": "M.P",
-      "zip": "476115"
-    },
-    "website": "http://www.timbakerdev.com",
-    "resumedownload": "https://drive.google.com/file/d/1U9B_bnUd-LO59MXM-Y8Yz_xk2dXce7y-/view?usp=sharing",
-    "social": [
-      {
-        "name": "facebook",
-        "url": "https://www.facebook.com/profile.php?id=100004466655904",
-        "className": "fa fa-facebook"
-      },
-      {
-        "name": "linkedin",
-        "url": "https://www.linkedin.com/in/vishalgupta30699/",
-        "className": "fa fa-linkedin"
-      },
-      {
-        "name": "instagram",
-        "url": "https://www.instagram.com/vishalgupta9218/",
-        "className": "fa fa-instagram"
-      },
-      {
-        "name": "github",
-        "url": "https://github.com/vishalgupta30699",
-        "className": "fa fa-github"
-      }
-    ]
-  },
-  "resume": {
-    "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
-    "education": [
-      {
-        "school": "Ujjain Engineering College,Ujjain",
-        "degree": "Bachelor of Technology(B.Tech)",
-        "graduated": "2017-2021",
-        "description": "Graduated with Distinction"
-      }
-    ],
-    "work": [
-      {
-        "company": "Clever Programmer",
-        "title": "Team Member && React Specialist",
-        "years": "April 2020 - Present",
-        "description": "Teaching ReactJS to thousands of students."
-      },
-      {
-        "company": "Lindar Media",
-        "title": "Software Engineer",
-        "years": "Nov 2019 - April 2020",
-        "description": "Building MrQ, a gambling website."
-      }
-    ],
-    "skills": [
-      {
-        "name": "C"
-      },
-      {
-        "name": "C++"
-      },
-      {
-        "name": "Java"
-      },
-      {
-        "name": "Python"
-      },
-      {
-        "name": "HTML"
-      },
-      {
-        "name": "CSS"
-      },
-      {
-        "name": "JavaScript"
-      },
-      {
-        "name": "ReactJS"
-      },
-      {
-        "name": "NodeJs"
-      },
-      {
-        "name": "MySQL"
-      },
-      {
-        "name": "Apache-Derby"
-      },
-      {
-        "name": "MongoDB"
-      },
-      {
-        "name":"SpringBoot"
-      }
-    ]
-  },
-  "portfolio": {
-    "projects": [
-      {
-        "title": "Online Coding Compiler",
-        "category": "Coding Compiler Platform built in Java,HTML,CSS,JavaScript,Tomcat,JQuery,Bootstrap",
-        "image": "onlinecompiler.jpg",
-        "url": "https://youtu.be/C_6xLOwJ6VM"
-      },
-      {
-        "title": "IJ GUI Tool",
-        "category": "GUI Tool which connects to Apache-Derby database(Java,Swing,AWT and Apache-Derby.)",
-        "image": "IJGUITool.jpg",
-        "url": "https://youtu.be/FXL4uAAHDXk"
-      },
-      {
-        "title": "Web Services",
-        "category": "Web application that converts High resolution video to low resolution video,URL to PDF,MySQL to Excel file",
-        "image": "webservices.jpg",
-        "url": " https://github.com/vishalgupta30699/Web-Services"
-      }
-    ]
-  }
-      }
-    };
-
-  }
-
- /* getResumeData(){
-    $.ajax({
-      url:'/resumeData.json',
-      dataType:'json',
-      cache: false,
-      success: function(data){
-        this.setState({resumeData: data});
-      }.bind(this),
-      error: function(xhr, status, err){
-        console.log(err);
-        alert(err);
-      }
-    });
-  }
-
-  componentDidMount(){
-    this.getResumeData();
-  }*/
-
-  render() {
-    return (
-      <div className="App">
-        <Header data={this.state.resumeData.main}/>
-        <About data={this.state.resumeData.main}/>
-        <Resume data={this.state.resumeData.resume}/>
-        <Portfolio data={this.state.resumeData.portfolio}/>
-        <Contact data={this.state.resumeData.main}/>
-        <Footer data={this.state.resumeData.main}/>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <Element name="home">
+        <Home />
+      </Element>
+      <Element name="about">
+        <About />
+      </Element>
+      <Element name="experience">
+        <Experience />
+      </Element>
+      <Element name="projects">
+        <Project />
+      </Element>
+      <Element name="skills">
+        <Skills />
+      </Element>
+      <Element name="contact">
+        <Contact />
+      </Element>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
