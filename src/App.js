@@ -16,12 +16,12 @@ function App() {
       <Element name="home">
         <Home />
       </Element>
-      <Element name="about">
+      {/* <Element name="about">
         <About />
       </Element>
       <Element name="experience">
         <Experience />
-      </Element>
+      </Element> */}
       <Element name="projects">
         <Project />
       </Element>

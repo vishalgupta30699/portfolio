@@ -1,0 +1,137 @@
+.container {
+  padding: 5rem 0;
+  background-color: #fff;
+}
+
+.pro_content {
+  margin: 0 auto;
+  max-width: 90rem;
+  padding: 0 4rem;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content > p {
+  text-transform: uppercase;
+  color: #147efb;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.project-content > h3 {
+  color: #2d2e32;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  height: auto;
+  width: 100%;
+}
+
+.pro {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  padding: 1.4rem;
+  background-color: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 20rem;
+}
+
+.pro:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.pro_img {
+  background-color: hsla(0, 0%, 46%, 0.2);
+  border-radius: 17px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: auto;
+  overflow: hidden;
+  width: 500px;
+}
+
+.pro_img:hover {
+  opacity: 0.5;
+}
+
+.pro_img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  mix-blend-mode: transparent;
+  object-position: center 0;
+}
+
+.pro_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+}
+
+.pro_name {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: rgb(252, 66, 215);
+}
+
+.pro_desc {
+  color: #767676;
+  font-size: 17px;
+  text-align: center;
+  text-transform: none;
+  margin-bottom: 2px;
+}
+
+.pro_tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.pro_tech p {
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 13px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pro_tech p:hover {
+  background-color: #147efb;
+  color: #fff;
+}
+
+.pro_link {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pro_link a {
+  color: #2d2e32;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}

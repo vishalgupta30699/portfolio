@@ -33,6 +33,22 @@ const Home = () => {
                 <FontAwesomeIcon icon={faLinkedin} size="2x" />
               </a>
             </div>
+            <div className="doc_btn">
+              <a
+                href="https://drive.google.com/file/d/1D3lwqdGiVctFz75LhfJltfpd_8QITGii/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button>Resume</button>
+              </a>
+              <a
+                href="https://drive.google.com/file/d/1oATCWvbgmg6XfmYUUUDhy1KQ2DcTxoru/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button>CV</button>
+              </a>
+            </div>
           </div>
           <div className="hero-img">{/* <img src={myImage} alt="" /> */}</div>
         </div>
